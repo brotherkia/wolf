@@ -13,6 +13,7 @@ int main()
         sum = c*(user.length()-i);
         reg += sum;
     }
+    //-----------------------------------------------------
     reg = reg ^ 0x13131313;
     reg = ~reg ;
     reg = reg ^ 0x1234ABCD;
@@ -20,6 +21,8 @@ int main()
     reg = reg & 0x0F0F0F0F;
     reg2 = reg2 & 0xF0F0F0F0;
     reg2 = reg2 >> 4;   
+    //-----------------------------------------------------
+    
     for (int i=0 ; i<4 ; i++){
         x = reg % 0x100 ;
         y = reg2 % 0x100 ; 
@@ -38,15 +41,15 @@ int main()
         // cout<<std::hex<<y<<"\n";
         // cout<<"\n--------\n"<<char(y);
     }
-   
-//   for(int i=4 ; i<9 ; i++)
-//     cout<<char(password[i]);
-   
+    //-------------------------------------------------------
+    
+    
     cout<<"Your password is : 12-";
     for(int i = 0 ; i<8 ; i++){
         cout<<char(password[i]);
         if(i==3)
             cout<<"-";
     }
+    //-------------------------------------------------------
     return 0;
 }
