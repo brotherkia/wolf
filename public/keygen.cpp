@@ -5,7 +5,6 @@ using namespace std;
 int main()
 {
     unsigned int reg =0, c=0 , reg2 = 0 ,sum = 0 , x=0 , y=0 , password[8];
-    char hex1[20] , hex2[20] ;
     string user;
     cout<<"Enter username: ";
     cin>>user;
@@ -20,28 +19,7 @@ int main()
     reg2 = reg; 
     reg = reg & 0x0F0F0F0F;
     reg2 = reg2 & 0xF0F0F0F0;
-    reg2 = reg2 >> 4;
-    
-    // sprintf(hex1, "%X", reg);
-    // sprintf(hex2,"%X", reg2);
-    // cout<<hex1<<"\n"<<hex2 <<"\n-----------\n";
-
-
-
-
-
-    // x = (reg % 100) | 0x30;
-    // cout<<std::hex<<x<<"||||||||||||";
-    // sprintf(hex3 , "%X",x);
-    // cout<<hex3<<"\n";
-    
-    
-    
-    
-    
-    
-    
-    
+    reg2 = reg2 >> 4;   
     for (int i=0 ; i<4 ; i++){
         x = reg % 0x100 ;
         y = reg2 % 0x100 ; 
